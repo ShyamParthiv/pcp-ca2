@@ -1,15 +1,11 @@
 import React from "react";
-import { Children } from "react";
 import NavBar from "../components/NavBar";
-import Footer from "../components/Footer";
 
-function MainLayout(props) {
-  const { children } = props;
+function MainLayout({ children }) {
   return (
     <>
       <NavBar />
       <main>{children}</main>
-      {/* <Footer /> */}
     </>
   );
 }

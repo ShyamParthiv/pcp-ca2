@@ -3,8 +3,10 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import MainLayout from "../layouts/MainLayout";
 import Home from "../pages/Home";
-import MovieStats from "../components/MovieStats";
+import OrderStats from "../components/OrderStats";
 import Favorites from "../pages/Favorites";
+import OrderDetails from "../pages/OrderDetails";
+import FilterOrders from "../pages/FilterOrders";
 
 const AppRouter = () => {
   return (
@@ -13,10 +15,10 @@ const AppRouter = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/favorites" element={<Favorites />} />
-          <Route path="/stats" element={<MovieStats />} />
+          <Route path="/stats" element={<OrderStats />} />
+          <Route path="/filter" element={<FilterOrders />} />
 
-          {/* Optional but important for CA2 pattern */}
-          <Route path="/movies/:id" element={<Home />} />
+          <Route path="/orders/:id" element={<OrderDetails />} />
 
           {/* Fallback */}
           <Route path="*" element={<h2>Page Not Found</h2>} />

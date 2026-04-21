@@ -1,21 +1,21 @@
 import React from "react";
-import { useMovie } from "../context/MovieContext";
-import MovieCard from "../components/MovieCard";
+import { useOrders } from "../context/FoodDeliveryContext";
+import OrderCard from "../components/OrderCard";
 
 const Favorites = () => {
-  const { favorites } = useMovie();
+  const { favorites } = useOrders();
 
   return (
     <div className="app-container" data-testid="favorites-page">
       <h1 className="main-title" data-testid="favorites-title">
-        Favorite Movies
+        Favorite Orders
       </h1>
 
       <div className="user-list" data-testid="favorites-list">
         {favorites.length === 0 ? (
-          <p data-testid="no-favorites">No favorite movies</p>
+          <p data-testid="no-favorites">No favorite orders</p>
         ) : (
-          favorites.map((movie) => <MovieCard key={movie.id} movie={movie} />)
+          favorites.map((order) => <OrderCard key={order.id} order={order} />)
         )}
       </div>
     </div>
