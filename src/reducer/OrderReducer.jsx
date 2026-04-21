@@ -57,6 +57,15 @@ const OrderReducer = (state, action) => {
       };
     }
 
+    case "MARK_DELIVERED": {
+      return {
+        ...state,
+        orders: state.orders.map((order) =>
+          order.id === action.payload ? { ...order, status: "Delivered" } : order
+        ),
+      };
+    }
+
     default:
       console.warn("Unknown action:", action.type);
       return state;

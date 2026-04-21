@@ -37,6 +37,9 @@ export const FoodDeliveryProvider = ({ children }) => {
   const updateRating = (id, rating) =>
     dispatch({ type: "UPDATE_RATING", payload: { id, rating } });
 
+  const markOrderDelivered = (id) =>
+    dispatch({ type: "MARK_DELIVERED", payload: id });
+
   const toggleFavorite = (id) => dispatch({ type: "TOGGLE_FAVORITE", payload: id });
 
   return (
@@ -49,6 +52,7 @@ export const FoodDeliveryProvider = ({ children }) => {
         updateStatus,
         deleteOrder,
         updateRating,
+        markOrderDelivered,
         toggleFavorite,
       }}
     >

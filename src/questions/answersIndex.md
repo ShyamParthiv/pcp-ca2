@@ -42,3 +42,32 @@ Answer files:
 - Route setup: src/routers/AppRouter.jsx
 - Filter page (uses context data, no refetch): src/pages/FilterOrders.jsx
 - Reusable display component reuse: src/components/OrderCard.jsx
+
+## Question 4
+
+Requirement:
+- Route: /orders
+- Add ability to mark an order delivered
+- Must use reducer action
+- Delivered order must not appear in pending list
+- Status should update automatically
+
+Answer files:
+- Pending list helper: src/questions/question4.js
+- Reducer action: src/reducer/OrderReducer.jsx
+- Context dispatch method: src/context/FoodDeliveryContext.jsx
+- Route setup: src/routers/AppRouter.jsx
+- Orders status page: src/pages/OrderStatusLogic.jsx
+
+## Question 5
+
+Requirement:
+- Route: /stats
+- Display total valid orders
+- Display delivered orders
+- Display cancelled orders
+
+Answer files:
+- Analytics helper: src/questions/question5.js
+- Stats route setup: src/routers/AppRouter.jsx
+- Dashboard page: src/components/OrderStats.jsx
